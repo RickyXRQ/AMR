@@ -3,3 +3,7 @@ This repository includes AMR encode/decode process, besides, it can form the .wa
 
 #Platform
 Ubuntu 14.04 and ALSA library is also required
+
+#More
+This project is based on 3GPP TS 06.73 V7.6.0 (2001-12)
+
