@@ -128,11 +128,11 @@ ALL_SRCS=$(ENCODER_SRCS) $(DECODER_SRCS) $(FIPOP_SRCS) $(SPC_OBJS:.o=.c)
 #
 # default target: build standalone speech encoder and decoder
 #
-default: clean_all spclib fipoplib decoder
+default: clean_all spclib fipoplib encoder decoder
 
 
-#encoder: $(ENCODER_OBJS) $(SPCLIB) $(FIPOPLIB)
-#	$(CC) -o encoder $(CFLAGS) $(ENCODER_OBJS) $(SPCLIB) $(FIPOPLIB) $(LDFLAGS)
+encoder: $(ENCODER_OBJS) $(SPCLIB) $(FIPOPLIB)
+	$(CC) -o encoder $(CFLAGS) $(ENCODER_OBJS) $(SPCLIB) $(FIPOPLIB) $(LDFLAGS)
 
 decoder: $(DECODER_OBJS) $(SPCLIB) $(FIPOPLIB)
 	$(CC) -o decoder $(CFLAGS) $(DECODER_OBJS) $(SPCLIB) $(FIPOPLIB) $(LDFLAGS) -lasound
